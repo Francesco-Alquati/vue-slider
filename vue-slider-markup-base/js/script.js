@@ -39,6 +39,9 @@ createApp({
             // Indice della diapositiva attualmente selezionata
             currentSlideIndex: 0,
 
+            // creo un valore null
+            scroll: null,
+
         };
     },
     created(){
@@ -71,12 +74,19 @@ createApp({
             },
 
             // metodo per far partire automaticamente il cambio immagine
-            autoScroll(){
-                setInterval(() => {
-                    this.nextSlide();
-                }, 3000)
+            autoScroll() {
+                this.scroll = setInterval(() => {
+                  this.nextSlide();
+                }, 3000);
             },
-            
+            // metto in pausa l'autoscroll
+            pauseAutoplay() {
+            clearInterval(this.scroll);
+            },
+            // riprendo lo scorrimento
+            resumeAutoplay() {
+            this.autoScroll(); 
+            },
         },
 // "Monto" l'istanza Vue sull'elemento '#app'
 }).mount('#app');
