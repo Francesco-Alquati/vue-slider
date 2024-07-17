@@ -54,6 +54,9 @@
     border: 2px solid #ccc;
     opacity: 1;
 }
+.full-opacity{
+    opacity: 1;
+}
 
 .prev, .next {
     width: 20px;
