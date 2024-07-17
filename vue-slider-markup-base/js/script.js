@@ -35,6 +35,9 @@ createApp({
 
             // Oggetto attualmente selezionato
             selectedSlide: slides[0],
+
+            // Indice della diapositiva attualmente selezionata
+            currentSlideIndex: 0,
         };
     },
         // Metodo per cambiare la diapositiva selezionata
@@ -42,6 +45,7 @@ createApp({
             changeSlide(slide) {
                 this.selectedSlide = slide;
             },
-    },
+            
+        },
 // "Monto" l'istanza Vue sull'elemento '#app'
 }).mount('#app');

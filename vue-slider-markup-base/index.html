@@ -28,13 +28,13 @@
 
                 <div class="thumbs">
                     <div class="prev"></div>
-                    <div class="next"></div>
-                    
+
                     <!-- itero sull'array slides per visualizzare le miniature. -->
                     <!-- @click su ogni miniatura chiama il metodo changeSlide quando viene cliccata. -->
                     <div v-for="slide in slides" :key="slide.title" class="thumb" @click="changeSlide(slide)">
                         <img :src="slide.image" alt="Miniatura" />
                     </div>
+                    <div class="next"></div>
                 </div>
 
             </div>
