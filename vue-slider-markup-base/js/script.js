@@ -30,6 +30,11 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
+            // Array di oggetti
+            slides: slides,
+
+            // Oggetto attualmente selezionato
+            selectedSlide: slides[0],
         };
     },
 // "Monto" l'istanza Vue sull'elemento '#app'
