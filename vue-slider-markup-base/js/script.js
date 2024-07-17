@@ -41,11 +41,15 @@ createApp({
 
         };
     },
+    created(){
+        this.autoScroll();
+    },
         // Metodo per cambiare la diapositiva selezionata
         methods: {
             changeSlide(slide) {
                 this.selectedSlide = slide;
             },
+
             // Metodo per andare alla diapositiva precedente
             prevSlide() {
                 if (this.currentSlideIndex === 0) {
@@ -64,6 +68,13 @@ createApp({
                     this.currentSlideIndex++;
                 }
                 this.selectedSlide = this.slides[this.currentSlideIndex];
+            },
+
+            // metodo per far partire automaticamente il cambio immagine
+            autoScroll(){
+                setInterval(() => {
+                    this.nextSlide();
+                }, 3000)
             },
             
         },
