@@ -37,5 +37,11 @@ createApp({
             selectedSlide: slides[0],
         };
     },
+        // Metodo per cambiare la diapositiva selezionata
+        methods: {
+            changeSlide(slide) {
+                this.selectedSlide = slide;
+            },
+    },
 // "Monto" l'istanza Vue sull'elemento '#app'
 }).mount('#app');
