@@ -45,7 +45,25 @@ createApp({
             changeSlide(slide) {
                 this.selectedSlide = slide;
             },
-            
+            // Metodo per andare alla diapositiva precedente
+            prevSlide() {
+                if (this.currentSlideIndex === 0) {
+                    this.currentSlideIndex = this.slides.length - 1;
+                } else {
+                    this.currentSlideIndex--;
+                }
+                this.selectedSlide = this.slides[this.currentSlideIndex];
+            },
+
+            // Metodo per andare alla diapositiva successiva
+            nextSlide() {
+                if (this.currentSlideIndex === this.slides.length - 1) {
+                    this.currentSlideIndex = 0;
+                } else {
+                    this.currentSlideIndex++;
+                }
+                this.selectedSlide = this.slides[this.currentSlideIndex];
+            },
         },
 // "Monto" l'istanza Vue sull'elemento '#app'
 }).mount('#app');
